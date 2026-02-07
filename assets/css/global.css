@@ -1,0 +1,45 @@
+:root {
+    /* Colores */
+    --color-rojo: #EE1B2C;
+    --color-blanco: #F0F0F0;
+	--color-gris: #818A8E;
+	--color-gris-claro: #ACB1B5;
+	--color-gris-correcto: #848D94;
+    --color-gris-oscuro: #50555B;
+	--color-azul: #20335D;
+	--color-amarrillo: #FFCC00;
+    --color-negro: #000;
+
+    /* Colores oscuros*/
+    --color-rojo-presionado: #9e131f; /* Color para cuando se presiona un boton */
+
+    /* Sombras */
+    --sombra-suave: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    --sombra-fuerte: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+    /* Bordes */
+    --borde-redondeado: 5px;
+
+    /* Espaciados */
+    --espaciado-grande: 30px;
+    --espaciado-mediano: 20px;
+    --espaciado-pequeno: 10px;
+
+    /*Tipografias*/
+    --font-principal: 'JetBrains Mono', monospace;
+    --font-secundaria: 'Jomhuria', serif;
+}
+
+*
+{
+    padding: 0;
+    margin: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'neutraface';
+	src: url('../fonts/Neutraface/Neutra2Display-Bold.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}

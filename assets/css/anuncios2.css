@@ -1,0 +1,320 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal que envuelve todo el contenido */
+.contenedor {
+    max-width: 95%;
+    height: auto;
+    margin: var(--espaciado-grande) auto; 
+    background: var(--color-blanco); 
+    padding: var(--espaciado-grande); 
+    border-radius: var(--borde-redondeado); 
+    box-shadow: var(--sombra-fuerte); 
+    position: relative;
+}
+
+/* Estilos para el encabezado del contenedor */
+.header_contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--espaciado-pequeno); 
+}
+
+/* Estilos para el botón de filtro */
+.filter-btn {
+    color: var(--color-gris-oscuro); 
+    border: none;
+    padding: var(--espaciado-pequeno); 
+    cursor: pointer;
+    border-radius: var(--borde-redondeado); 
+}
+
+/* Estilos para la sección de filtros (oculta inicialmente) */
+.filtros {
+    display: none;
+    width: 100%;
+    background: var(--color-gris-claro); 
+    border-radius: var(--borde-redondeado); 
+    box-shadow: var(--sombra-suave); 
+}
+
+/* Contenedor interno para los filtros */
+.filtros_contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: var(--espaciado-pequeno); 
+    border-radius: var(--borde-redondeado); 
+    margin-bottom: var(--espaciado-pequeno); 
+}
+
+.filtros_contenedor2 {
+    display: flex; 
+    width: 100%;
+    border-radius: var(--borde-redondeado); 
+    margin-bottom: var(--espaciado-pequeno); 
+}
+
+/* Estilos para las etiquetas de los filtros */
+.filtros label {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Estilos para los inputs de texto y los selectores */
+.filtros input[type="text"], .filtros select {
+    width: 95%;
+    padding: 5px;
+    margin-bottom: var(--espaciado-pequeno); 
+    border: 1px solid var(--color-blanco);
+    border-radius: var(--borde-redondeado); 
+}
+
+.filtros #fechaInicio {
+    padding: 5px;
+    margin-bottom: var(--espaciado-pequeno); 
+    border: 1px solid var(--color-blanco);
+    border-radius: var(--borde-redondeado); 
+}
+
+.filtros #fechaFin {
+    padding: 5px;
+    margin-bottom: var(--espaciado-pequeno); 
+    border: 1px solid var(--color-blanco);
+    border-radius: var(--borde-redondeado); 
+}
+
+.buscador {
+    grid-column: 1 / -1;
+}
+
+/* Estilos específicos para el input de palabras clave */
+.filtros_contenedor #palabrasClave {
+    width: 91%;
+}
+
+/* Estilo para tarjeta expandida (una sola columna) */
+.noticias-card.expanded-single, .eventos-card.expanded-single {
+    grid-column: 1 / -1;
+    min-height: auto;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Estilo para botón "Leer más" en modo expandido */
+.noticias-card.expanded-single .leer-mas-btn,
+.eventos-card.expanded-single .evento-link {
+    position: sticky;
+    bottom: 0;
+    background: var(--color-blanco);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Ajusta el texto en modo expandido */
+.noticias-card.expanded-single .descripcion-text,
+.eventos-card.expanded-single .descripcion-text {
+    display: block !important;
+    padding-bottom: 40px; /* Espacio para el botón */
+}
+
+.noticias-card.expanded-single .resumen-text,
+.eventos-card.expanded-single .resumen-text {
+    display: none !important;
+}
+
+/* Estilos para cada tarjeta de noticia */
+.noticias-card, .eventos-card {
+    background: var(--color-blanco);
+    padding: var(--espaciado-pequeno);
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-suave);
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ocupa toda la altura disponible */
+    min-height: 400px; /* Altura mínima consistente */
+    max-height: 500px; /* Altura máxima para evitar que crezcan demasiado */
+    overflow: hidden; /* Evita que el contenido desborde */
+    transition: all 0.3s ease;
+}
+
+/* Contenedor de contenido flexible */
+.card-content {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Imágenes responsivas */
+.noticias-card img, .eventos-card img {
+    width: 100%;
+    height: 180px; /* Altura fija para imágenes */
+    border-radius: var(--borde-redondeado);
+}
+
+/* Texto responsivo */
+.noticias-card h3, .eventos-card h3 {
+    font-size: clamp(1rem, 2vw, 1.2rem); /* Tamaño responsivo */
+    margin: 10px 0;
+}
+
+.resumen-text, .descripcion-text {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+    line-height: 1.4;
+    flex-grow: 1; /* Permite que el texto ocupe el espacio disponible */
+}
+
+/* Botones en posición fija */
+.leer-mas-btn, .evento-link {
+    align-self: flex-end; /* Alinea a la derecha */
+    margin-top: auto; /* Empuja el botón hacia abajo */
+}
+
+/* Grid responsivo */
+.noticias-grid, .eventos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--espaciado-pequeno);
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .noticias-grid, .eventos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .noticias-card, .eventos-card {
+        min-height: 350px;
+        max-height: none;
+    }
+    
+    .noticias-card img, .eventos-card img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .noticias-grid, .eventos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para el mensaje de "No hay resultados" */
+.no-results {
+    display: none;
+    text-align: center;
+    color: var(--color-rojo); 
+    font-weight: bold;
+    margin-top: var(--espaciado-mediano); 
+}
+
+/* Estilos para la paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--espaciado-mediano); 
+}
+
+/* Estilos para los botones de paginación */
+.pagination button {
+    color: var(--color-rojo); 
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: var(--borde-redondeado); 
+    margin: 0 2px;
+}
+
+.pagination button:hover {
+    color: var(--color-blanco); 
+    background: var(--color-rojo-presionado);  
+}
+
+/* Estilos para el botón activo en la paginación */
+.pagination button.active {
+    color: var(--color-blanco); 
+    background: var(--color-rojo); 
+}
+
+/* Estilos para el input de la paginación */
+.input_pagination {
+    margin-top: var(--espaciado-mediano);
+}
+
+.input_pagination input[type="number"] {
+    width: 75px; 
+    padding: 8px 12px;
+    border: var(--border-redondeado-inputs);
+    border-radius: var(--borde-redondeado); 
+}
+
+.input_pagination button#btn-pagination {
+    background-color: var(--color-rojo);
+    color: var(--color-blanco); 
+    padding: 8px 12px;
+    border: none;
+    border-radius: var(--borde-redondeado); 
+    cursor: pointer;
+}
+
+/* Estilos para la sección "Mostrar más misiones" */
+.load-more {
+    text-align: center;
+    margin-top: var(--espaciado-mediano); 
+}
+
+/* Estilos para el botón "Mostrar más misiones" */
+.load-more button {
+    background: var(--color-rojo); 
+    color: var(--color-blanco); 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: var(--borde-redondeado); 
+}
+
+
+/* Estilos para el botón "Leer más" */
+.read-more {
+    background: var(--color-rojo);
+    color: var(--color-blanco); 
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: var(--borde-redondeado);
+    margin-top: var(--espaciado-pequeno);
+}
+
+.leer-mas-btn, .evento-link {
+    align-self: flex-end;
+    margin-top: auto;
+    position: static; /* Cambia de absolute a static */
+    
+    padding: 8px 16px; /* Ajusta el padding */
+}
+.leer-mas-btn{
+    color: var(--color-rojo); 
+    border: none;
+    text-decoration: underline;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: var(--borde-redondeado);
+    margin-top: var(--espaciado-pequeno);
+    width: auto; /* Ancho automático */
+}
+.evento-link {
+    background: var(--color-rojo);
+    color: var(--color-blanco); 
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: var(--borde-redondeado);
+    margin-top: var(--espaciado-pequeno);
+    width: 100%
+}
