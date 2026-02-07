@@ -1,0 +1,63 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 150px;
+    background-color: #d1d8df8f;  /* Azul claro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 25px;  /* Espacio entre ítems */
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+}
+
+/* Alinear íconos arriba del texto */
+.menu-item {
+    display: flex;
+    flex-direction: column;  /* Alinea íconos arriba del texto */
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Ajustar los íconos del sidebar */
+.menu-item i {
+    font-size: 25px;  /* Ajusta el tamaño general de los íconos */
+    margin-bottom: 15px;  /* Espacio entre el ícono y el texto */
+    color: #333;  /* Color de los íconos */
+    transition: color 0.3s;  /* Efecto al pasar el cursor */
+}
+
+.menu-item i.fa-person-dress {
+    font-size: 37px;  /* Ícono de Pacientes más grande */
+}
+
+.menu-item i.fa-clipboard {
+    font-size: 30px;  /* Ícono de Inventario más grande */
+}
+
+/* Hover en los íconos */
+.menu-item:hover i {
+    color: #555;  /* Color al pasar el cursor */
+}
+
+/* Estilo para el texto de los ítems del menú */
+.menu-item span {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+}
+
+.logout {
+    margin-top: auto;  /* Empuja "Salir" al fondo */
+    padding-bottom: 50px;  /* Ajusta la distancia desde el fondo (aumenta o disminuye el valor según necesites) */
+}

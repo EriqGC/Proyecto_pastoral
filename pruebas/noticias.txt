@@ -1,0 +1,144 @@
+const todasLasNoticias = [
+    { img: "../assets/img/pestaña_anuncios/noticia1.png", titulo: "Encuentro Nacional de Pastoral Juvenil", 
+        resumen: "Jóvenes de todo el país se reunieron para compartir su fe y fortalecer su misión evangelizadora.", 
+        descripcion: "El Encuentro Nacional de Pastoral Juvenil reunió a cientos de jóvenes en un evento cargado de oración, reflexión y fraternidad. Se abordaron temas como el liderazgo cristiano, el impacto de la fe en la sociedad y la importancia de la evangelización digital.", 
+        categoria: "Juventud y vocación", 
+        fecha: "2024-03-10", 
+        ubicacion: "nacional", 
+        fuente: "oficial", 
+        relevance: "most-viewed" },
+
+    { img: "../assets/img/pestaña_anuncios/noticia2.png", titulo: "Campaña solidaria: 'Unidos por los más necesitados'", 
+        resumen: "La comunidad parroquial se une para llevar ayuda a familias en situación de vulnerabilidad.", 
+        descripcion: "En un esfuerzo conjunto, la pastoral social ha lanzado una campaña de recolección de alimentos y ropa para personas en situación de calle. Se han organizado grupos de voluntarios para la distribución en distintas parroquias.", 
+        categoria: "Justicia social y caridad", fecha: "2024-02-28", ubicacion: "local", fuente: "catolica", relevance: "most-commented" },
+
+    { img: "../assets/img/pestaña_anuncios/noticia3.png", titulo: "EVANGELIO DEL DÍA", 
+        resumen: "Juan 15, 12-17: 'Ámense los unos a los otros como yo los he amado.'", 
+        descripcion: "La lectura del evangelio de hoy nos recuerda el mandamiento del amor fraterno. Reflexionamos sobre cómo podemos aplicarlo en nuestra vida cotidiana y en nuestra comunidad.", 
+        categoria: "Fe y espiritualidad", fecha: "2024-03-09", ubicacion: "internacional", fuente: "general", relevance: "most-viewed" },
+        { img: "../assets/img/pestaña_anuncios/noticia1.png", titulo: "Encuentro Nacional de Pastoral Juvenil", 
+        resumen: "Jóvenes de todo el país se reunieron para compartir su fe y fortalecer su misión evangelizadora.", 
+        descripcion: "El Encuentro Nacional de Pastoral Juvenil reunió a cientos de jóvenes en un evento cargado de oración, reflexión y fraternidad. Se abordaron temas como el liderazgo cristiano, el impacto de la fe en la sociedad y la importancia de la evangelización digital.", 
+        categoria: "Juventud y vocación", fecha: "2024-03-10", ubicacion: "nacional", fuente: "oficial", relevance: "most-viewed" },
+
+    { img: "../assets/img/pestaña_anuncios/noticia2.png", titulo: "Campaña solidaria: 'Unidos por los más necesitados'", 
+        resumen: "La comunidad parroquial se une para llevar ayuda a familias en situación de vulnerabilidad.", 
+        descripcion: "En un esfuerzo conjunto, la pastoral social ha lanzado una campaña de recolección de alimentos y ropa para personas en situación de calle. Se han organizado grupos de voluntarios para la distribución en distintas parroquias.", 
+        categoria: "Justicia social y caridad", fecha: "2024-02-28", ubicacion: "local", fuente: "catolica", relevance: "most-commented" },
+
+    { img: "../assets/img/pestaña_anuncios/noticia3.png", titulo: "EVANGELIO DEL DÍA", 
+        resumen: "Juan 15, 12-17: 'Ámense los unos a los otros como yo los he amado.'", 
+        descripcion: "La lectura del evangelio de hoy nos recuerda el mandamiento del amor fraterno. Reflexionamos sobre cómo podemos aplicarlo en nuestra vida cotidiana y en nuestra comunidad.", 
+        categoria: "Fe y espiritualidad", fecha: "2024-03-09", ubicacion: "internacional", fuente: "general", relevance: "most-viewed" },
+        { img: "../assets/img/pestaña_anuncios/noticia1.png", titulo: "Encuentro Nacional de Pastoral Juvenil", 
+        resumen: "Jóvenes de todo el país se reunieron para compartir su fe y fortalecer su misión evangelizadora.", 
+        descripcion: "El Encuentro Nacional de Pastoral Juvenil reunió a cientos de jóvenes en un evento cargado de oración, reflexión y fraternidad. Se abordaron temas como el liderazgo cristiano, el impacto de la fe en la sociedad y la importancia de la evangelización digital.", 
+        categoria: "Juventud y vocación", fecha: "2024-03-10", ubicacion: "nacional", fuente: "oficial", relevance: "most-viewed" },
+
+    { img: "../assets/img/pestaña_anuncios/noticia2.png", titulo: "Campaña solidaria: 'Unidos por los más necesitados'", 
+        resumen: "La comunidad parroquial se une para llevar ayuda a familias en situación de vulnerabilidad.", 
+        descripcion: "En un esfuerzo conjunto, la pastoral social ha lanzado una campaña de recolección de alimentos y ropa para personas en situación de calle. Se han organizado grupos de voluntarios para la distribución en distintas parroquias.", 
+        categoria: "Justicia social y caridad", fecha: "2024-02-28", ubicacion: "local", fuente: "catolica", relevance: "most-commented" },
+
+    { img: "../assets/img/pestaña_anuncios/noticia3.png", titulo: "EVANGELIO DEL DÍA", 
+        resumen: "Juan 15, 12-17: 'Ámense los unos a los otros como yo los he amado.'", 
+        descripcion: "La lectura del evangelio de hoy nos recuerda el mandamiento del amor fraterno. Reflexionamos sobre cómo podemos aplicarlo en nuestra vida cotidiana y en nuestra comunidad.", 
+        categoria: "Fe y espiritualidad", fecha: "2024-03-09", ubicacion: "internacional", fuente: "general", relevance: "most-viewed" },
+        { img: "../assets/img/pestaña_anuncios/noticia1.png", titulo: "Encuentro Nacional de Pastoral Juvenil", 
+        resumen: "Jóvenes de todo el país se reunieron para compartir su fe y fortalecer su misión evangelizadora.", 
+        descripcion: "El Encuentro Nacional de Pastoral Juvenil reunió a cientos de jóvenes en un evento cargado de oración, reflexión y fraternidad. Se abordaron temas como el liderazgo cristiano, el impacto de la fe en la sociedad y la importancia de la evangelización digital.", 
+        categoria: "Juventud y vocación", fecha: "2024-03-10", ubicacion: "nacional", fuente: "oficial", relevance: "most-viewed" },
+
+    { img: "../assets/img/pestaña_anuncios/noticia2.png", titulo: "Campaña solidaria: 'Unidos por los más necesitados'", 
+        resumen: "La comunidad parroquial se une para llevar ayuda a familias en situación de vulnerabilidad.", 
+        descripcion: "En un esfuerzo conjunto, la pastoral social ha lanzado una campaña de recolección de alimentos y ropa para personas en situación de calle. Se han organizado grupos de voluntarios para la distribución en distintas parroquias.", 
+        categoria: "Justicia social y caridad", fecha: "2024-02-28", ubicacion: "local", fuente: "catolica", relevance: "most-commented" },
+
+    { img: "../assets/img/pestaña_anuncios/noticia3.png", titulo: "EVANGELIO DEL DÍA", 
+        resumen: "Juan 15, 12-17: 'Ámense los unos a los otros como yo los he amado.'", 
+        descripcion: "La lectura del evangelio de hoy nos recuerda el mandamiento del amor fraterno. Reflexionamos sobre cómo podemos aplicarlo en nuestra vida cotidiana y en nuestra comunidad.", 
+        categoria: "Fe y espiritualidad", fecha: "2024-03-09", ubicacion: "internacional", fuente: "general", relevance: "most-viewed" },
+        { img: "../assets/img/pestaña_anuncios/noticia1.png", titulo: "Encuentro Nacional de Pastoral Juvenil", 
+        resumen: "Jóvenes de todo el país se reunieron para compartir su fe y fortalecer su misión evangelizadora.", 
+        descripcion: "El Encuentro Nacional de Pastoral Juvenil reunió a cientos de jóvenes en un evento cargado de oración, reflexión y fraternidad. Se abordaron temas como el liderazgo cristiano, el impacto de la fe en la sociedad y la importancia de la evangelización digital.", 
+        categoria: "Juventud y vocación", fecha: "2024-03-10", ubicacion: "nacional", fuente: "oficial", relevance: "most-viewed" },
+
+    { img: "../assets/img/pestaña_anuncios/noticia2.png", titulo: "Campaña solidaria: 'Unidos por los más necesitados'", 
+        resumen: "La comunidad parroquial se une para llevar ayuda a familias en situación de vulnerabilidad.", 
+        descripcion: "En un esfuerzo conjunto, la pastoral social ha lanzado una campaña de recolección de alimentos y ropa para personas en situación de calle. Se han organizado grupos de voluntarios para la distribución en distintas parroquias.", 
+        categoria: "Justicia social y caridad", fecha: "2024-02-28", ubicacion: "local", fuente: "catolica", relevance: "most-commented" },
+
+    { img: "../assets/img/pestaña_anuncios/noticia3.png", titulo: "EVANGELIO DEL DÍA", 
+        resumen: "Juan 15, 12-17: 'Ámense los unos a los otros como yo los he amado.'", 
+        descripcion: "La lectura del evangelio de hoy nos recuerda el mandamiento del amor fraterno. Reflexionamos sobre cómo podemos aplicarlo en nuestra vida cotidiana y en nuestra comunidad.", 
+        categoria: "Fe y espiritualidad", fecha: "2024-03-09", ubicacion: "internacional", fuente: "general", relevance: "most-viewed" }
+        // Agrega más noticias aquí...
+];
+
+
+
+const todasLosEventos = [
+    { img: "../assets/img/pestaña_anuncios/evento1.png", 
+    titulo: "Retiro espiritual de Cuaresma", 
+    resumen: "Un espacio de oración y reflexión para prepararnos espiritualmente en este tiempo litúrgico.", 
+    descripcion: "Este retiro está dirigido a todas las personas que desean profundizar su relación con Dios. Habrá momentos de meditación, dirección espiritual y adoración al Santísimo.", 
+    categoria: "Formación y espiritualidad", 
+    fecha: "2024-03-15", ubicacion: "parroquia San Juan", 
+    fuente: "oficial", relevance: "most-anticipated" },
+
+    { img: "../assets/img/pestaña_anuncios/evento2.png", titulo: "Misión urbana: 'Llevemos la fe a las calles'", 
+        resumen: "Grupos de misioneros llevarán un mensaje de esperanza a distintos barrios de la ciudad.", 
+        descripcion: "Este evento busca acercar la fe a las personas en espacios públicos. Se compartirán testimonios, se rezará el rosario y se ofrecerá ayuda a quienes lo necesiten.", 
+        categoria: "Misión y evangelización", fecha: "2024-04-05", 
+        ubicacion: "ciudad", fuente: "pastoral", 
+        relevance: "most-engaging" },
+
+    { img: "../assets/img/pestaña_anuncios/evento3.png", titulo: "Taller de Biblia: 'Descubre la Palabra de Dios'", 
+        resumen: "Un taller formativo para profundizar en el estudio de la Sagrada Escritura.", 
+        descripcion: "Acompáñanos en este espacio donde aprenderemos sobre la historia, estructura y mensajes clave de la Biblia. Ideal para quienes buscan fortalecer su fe a través del conocimiento.", 
+        categoria: "Educación y formación religiosa", fecha: "2024-03-22", ubicacion: "centro pastoral", fuente: "catolica", relevance: "most-participated" },
+    { img: "../assets/img/pestaña_anuncios/evento1.png", titulo: "Retiro espiritual de Cuaresma", 
+    resumen: "Un espacio de oración y reflexión para prepararnos espiritualmente en este tiempo litúrgico.", 
+    descripcion: "Este retiro está dirigido a todas las personas que desean profundizar su relación con Dios. Habrá momentos de meditación, dirección espiritual y adoración al Santísimo.", 
+    categoria: "Formación y espiritualidad", fecha: "2024-03-15", ubicacion: "parroquia San Juan", fuente: "oficial", relevance: "most-anticipated" },
+
+    { img: "../assets/img/pestaña_anuncios/evento2.png", titulo: "Misión urbana: 'Llevemos la fe a las calles'", 
+        resumen: "Grupos de misioneros llevarán un mensaje de esperanza a distintos barrios de la ciudad.", 
+        descripcion: "Este evento busca acercar la fe a las personas en espacios públicos. Se compartirán testimonios, se rezará el rosario y se ofrecerá ayuda a quienes lo necesiten.", 
+        categoria: "Misión y evangelización", fecha: "2024-04-05", ubicacion: "ciudad", fuente: "pastoral", relevance: "most-engaging" },
+
+    { img: "../assets/img/pestaña_anuncios/evento3.png", titulo: "Taller de Biblia: 'Descubre la Palabra de Dios'", 
+        resumen: "Un taller formativo para profundizar en el estudio de la Sagrada Escritura.", 
+        descripcion: "Acompáñanos en este espacio donde aprenderemos sobre la historia, estructura y mensajes clave de la Biblia. Ideal para quienes buscan fortalecer su fe a través del conocimiento.", 
+        categoria: "Educación y formación religiosa", fecha: "2024-03-22", ubicacion: "centro pastoral", fuente: "catolica", relevance: "most-participated" },
+    { img: "../assets/img/pestaña_anuncios/evento1.png", titulo: "Retiro espiritual de Cuaresma", 
+    resumen: "Un espacio de oración y reflexión para prepararnos espiritualmente en este tiempo litúrgico.", 
+    descripcion: "Este retiro está dirigido a todas las personas que desean profundizar su relación con Dios. Habrá momentos de meditación, dirección espiritual y adoración al Santísimo.", 
+    categoria: "Formación y espiritualidad", fecha: "2024-03-15", ubicacion: "parroquia San Juan", fuente: "oficial", relevance: "most-anticipated" },
+
+    { img: "../assets/img/pestaña_anuncios/evento2.png", titulo: "Misión urbana: 'Llevemos la fe a las calles'", 
+        resumen: "Grupos de misioneros llevarán un mensaje de esperanza a distintos barrios de la ciudad.", 
+        descripcion: "Este evento busca acercar la fe a las personas en espacios públicos. Se compartirán testimonios, se rezará el rosario y se ofrecerá ayuda a quienes lo necesiten.", 
+        categoria: "Misión y evangelización", fecha: "2024-04-05", ubicacion: "ciudad", fuente: "pastoral", relevance: "most-engaging" },
+
+    { img: "../assets/img/pestaña_anuncios/evento3.png", titulo: "Taller de Biblia: 'Descubre la Palabra de Dios'", 
+        resumen: "Un taller formativo para profundizar en el estudio de la Sagrada Escritura.", 
+        descripcion: "Acompáñanos en este espacio donde aprenderemos sobre la historia, estructura y mensajes clave de la Biblia. Ideal para quienes buscan fortalecer su fe a través del conocimiento.", 
+        categoria: "Educación y formación religiosa", fecha: "2024-03-22", ubicacion: "centro pastoral", fuente: "catolica", relevance: "most-participated" },
+    { img: "../assets/img/pestaña_anuncios/evento1.png", titulo: "Retiro espiritual de Cuaresma", 
+    resumen: "Un espacio de oración y reflexión para prepararnos espiritualmente en este tiempo litúrgico.", 
+    descripcion: "Este retiro está dirigido a todas las personas que desean profundizar su relación con Dios. Habrá momentos de meditación, dirección espiritual y adoración al Santísimo.", 
+    categoria: "Formación y espiritualidad", fecha: "2024-03-15", ubicacion: "parroquia San Juan", fuente: "oficial", relevance: "most-anticipated" },
+
+    { img: "../assets/img/pestaña_anuncios/evento2.png", titulo: "Misión urbana: 'Llevemos la fe a las calles'", 
+        resumen: "Grupos de misioneros llevarán un mensaje de esperanza a distintos barrios de la ciudad.", 
+        descripcion: "Este evento busca acercar la fe a las personas en espacios públicos. Se compartirán testimonios, se rezará el rosario y se ofrecerá ayuda a quienes lo necesiten.", 
+        categoria: "Misión y evangelización", fecha: "2024-04-05", ubicacion: "ciudad", fuente: "pastoral", relevance: "most-engaging" },
+
+    { img: "../assets/img/pestaña_anuncios/evento3.png", titulo: "Taller de Biblia: 'Descubre la Palabra de Dios'", 
+        resumen: "Un taller formativo para profundizar en el estudio de la Sagrada Escritura.", 
+        descripcion: "Acompáñanos en este espacio donde aprenderemos sobre la historia, estructura y mensajes clave de la Biblia. Ideal para quienes buscan fortalecer su fe a través del conocimiento.", 
+        categoria: "Educación y formación religiosa", fecha: "2024-03-22", ubicacion: "centro pastoral", fuente: "catolica", relevance: "most-participated" }
+    // Agrega más noticias aquí...
+];

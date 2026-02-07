@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link rel="stylesheet" href="../styles/calendario.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
+
+</head>
+
+<body>
+    <div class="sidebar" id="sidebar"></div>
+
+    <main>
+        <section class="calendar">
+            <!-- Header del calendario -->
+            <div class="calendar-header">
+                <div class="header_container">
+                    <button class="button button--secondary" data-nav-today-button>Hoy</button>
+                    <button class="calendar_button calendar_button--previous" data-nav-previous-button><i
+                            class="fa-solid fa-angle-left"></i></button>
+                    <time class="nav__date" data-nav-date></time>
+                    <button class="calendar_button calendar_button--next" data-nav-next-button><i
+                            class="fa-solid fa-angle-right"></i></button>
+                </div>
+                <button class="btnAgendar" data-event-create-button>+ Agendar nueva cita</button>
+            </div>
+            <div data-calendar-content></div>
+            <!-- CALENDARIO -->
+        </section>
+        
+        <template data-template="week-calendar">
+            <div class="week-calendar" data-week-calendar>
+                <!-- Días de la semana -->
+                <ul class="week-calendar__day-of-week-list" data-week-calendar-day-of-week-list>
+                </ul>
+                <!-- Eventos -->
+                <ul class="week-calendar__all-day-list" data-week-calendar-all-day-list>
+                </ul>
+
+                <div class="week-calendar__content">
+                    <div class="week-calendar__content-inner" data-calendar-scrollable>
+                        <!-- Horario -->
+                        <ul class="week-calendar__time-list">
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">12:00 AM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">1:00 AM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">2:00 AM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">3:00 AM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">4:00 AM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">5:00 AM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">6:00 AM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">7:00 AM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">8:00 AM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">9:00 AM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">10:00 AM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">11:00 AM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">12:00 PM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">1:00 PM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">2:00 PM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">3:00 PM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">4:00 PM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">5:00 PM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">6:00 PM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">7:00 PM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">8:00 PM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">9:00 PM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">10:00 PM</time>
+                            </li>
+                            <li class="week-calendar__time-item">
+                                <time class="week-calendar__time">11:00 PM</time>
+                            </li>
+                        </ul>
+                        <!-- Columnas -->
+                        <div class="week-calendar__columns" data-week-calendar-columns>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template data-template="week-calendar-day-of-week">
+            <li class="week-calendar__day-of-week" data-week-calendar-day-of-week>
+                <button class="week-calendar__day-of-week-button" data-week-calendar-day-of-week-button>
+                    <span class="week-calendar__day-of-week-day" data-week-calendar-day-of-week-day></span>
+                    <span class="week-calendar__day-of-week-number" data-week-calendar-day-of-week-number></span>
+                </button>
+            </li>
+        </template>
+
+        <template data-template="week-calendar-all-day-list-item">
+            <li class="week-calendar__all-day-list-item" data-week-calendar-all-day-list-item>
+                <ul class="event-list" data-event-list></ul>
+            </li>
+        </template>
+
+        <template data-template="week-calendar-column">
+            <div class="week-calendar__column" data-week-calendar-column>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+                <div class="week-calendar__cell"></div>
+            </div>
+        </template>
+
+        <!-- <template data-template="event-list-item">
+            <li class="event-list__item" data-event-list-item>
+            </li>
+        </template> -->
+
+
+        <template data-template="event">
+            <button class="event" data-event>
+                <span class="event__title" data-event-title></span>
+                <span class="event__time">
+                    <time data-event-start-time></time> - <time data-event-end-time></time>
+                </span>
+            </button>
+        </template>
+
+    </main>
+
+    <!-- Agendar nueva cita -->
+    <dialog class="dialog" data-dialog="event-form">
+        <form class="agendar" data-event-form>
+            <i class="fa-solid fa-xmark cerrar-modal" id="btnCerrarModal" data-dialog-close-button></i>
+
+            <input type="text" name="title" placeholder="Nombre de la paciente" class="nombre-input">
+
+            <div class="motivo">
+                <select>
+                    <option value="" disabled selected>Motivo</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="seguimiento">Seguimiento</option>
+                    <option value="ultrasonido">Ultrasonido</option>
+                    <option value="cirugía">Cirugía</option>
+                </select>
+            </div>
+
+            <div class="campo-fecha">
+                <input type="date" name="date" class="fecha" id="fecha-cita" name="fecha-cita">
+            </div>
+
+            <div class="campo-horas">
+                <input type="time" name="start-time" class="hora-inicio">
+                <span style="align-self: center;">-</span>
+                <input type="time" name="end-time" class="hora-fin">
+            </div>
+
+            <div class="botones">
+                <button class="cancelar" type="button" data-dialog-close-button>Cancelar</button>
+                <button class="crear" type="submit">Crear cita</button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Cerrar sesion -->
+    <div id="cerrarsesion" class="cerrarsesion">
+        <div class="cerrarsesion__contenido">
+            <p>¿Estás segura que quieres <span id="texto-salir">SALIR</span>?</p>
+            <button id="btnSalir" onclick="confirmarSalir()">Sí</button>
+            <button id="btnCancelar" onclick="cerrarCerrarsesion()">No</button>
+        </div>
+    </div>
+
+    <script type="module" src="../scripts/index.js"></script>
+    <script src="../scripts/sidebar.js"></script>
+    <script src="../scripts/cerrarsesion.js"></script>
+    <script src="https://kit.fontawesome.com/6f8f4ae056.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

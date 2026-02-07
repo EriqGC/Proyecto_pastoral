@@ -1,0 +1,367 @@
+body {
+    background-color: #F0EDED;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 50px;
+    padding-top: 110px;
+    margin-left: 150px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+}
+
+/* Caja de Visitas de Hoy */
+.visitas-hoy {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(36, 16, 16, 0.1);
+    padding: 1em;
+    max-width: 800px;
+    width: 100%;
+}
+.container_flex {
+    display: flex;
+    gap: 1em;
+    width: 100%;
+    max-width: 800px;
+}
+
+.visitas-hoy,
+.lista-pacientes {
+    width: 100%;
+}
+
+
+.visitas-hoy h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 25px;
+    color: #333;
+}
+
+.visitas-contenido {
+    text-align: center;
+}
+
+.numero-visitas {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: #333;
+}
+
+.sub-cajas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-caja {
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    width: 130px;
+}
+
+.pacientes-nuevas {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #ECD6D8;
+}
+
+.seguimientos {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #CDE5FF;
+}
+
+.sub-caja span {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.sub-caja .numero {
+    font-size: 24px;
+    font-weight: 700;
+}
+/* Caja de Lista de Pacientes */
+.lista-pacientes {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+}
+
+
+.lista-pacientes h2 {
+    font-size: 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.paciente {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.nombre {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: #333;
+    font-family: 'IBM Plex Sans', sans-serif;;
+    font-size: 16px;
+    color:#4e4e4e;
+}
+
+.circulo {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--paciente-color);
+}
+
+.hora {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    background-color: var(--paciente-color);
+    display: inline-block;
+    width: 70px;      /* Fija el ancho del recuadro de la hora */
+    text-align: center;
+}
+
+
+/* Calendario */
+.calendar {
+    background-color: #fff;
+    border-radius: 15px;                /* Bordes más pequeños */
+    padding: 10px;                      /* Menos espacio interno */                        
+    max-width: 800px;    
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;                   /* Texto más pequeño */
+    font-weight: 300;
+    color: #333;
+    padding: 5px;                      /* Menos espacio interno */
+}
+
+.calendar-body {
+    padding: 5px;                      /* Menos espacio interno */
+}
+
+.calendar-week-day {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: 400;
+    height: 40px;                     /* Menor altura para los días */
+    text-align: center;               /* Centra el texto */
+}
+
+.calendar-week-day div {
+    display: grid;
+    place-items: center;
+    color: #333;
+    font-size: 12px;                 /* Texto más pequeño para días */
+    padding: 5px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0px;
+    color: #333;
+    text-align: center;
+}
+
+.calendar-days div {
+    width: 100%;                     /* Celdas más pequeñas */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;                   /* Menos padding interno */
+    position: relative;
+    cursor: pointer;
+    font-size: 12px;               /* Texto más pequeño en celdas */
+    animation: to-top ls forwards;
+}
+
+.month-picker {
+    padding: 3px 8px;               /* Menos padding */
+    border-radius: 8px;             /* Bordes más pequeños */
+    cursor: pointer;
+    font-size: 20px;                /* Texto más pequeño */
+}
+
+.month-picker:hover {
+    background-color: #b4c1ce;  
+}
+
+.year-picker {
+    display: flex;
+    align-items: center;
+}
+
+.year-change {
+    height: 30px;                    /* Botones más pequeños */
+    width: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 5px;                  /* Menos espacio entre botones */
+    cursor: pointer;
+    font-size: 14px;                /* Texto más pequeño en botones */
+}
+
+.year-change:hover {
+    background-color: #b4c1ce;
+}
+
+.calendar-days div.curr-date{
+    background-color: #6299E1;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+}
+
+.month-list{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #f9f6f7;
+    padding: 20px;
+    color: #333;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 5px;
+    transform: scale(0);
+    visibility:hidden;
+    pointer-events: none;
+}
+
+.month-list.show{
+    transform: scale(1);
+    visibility: visible;
+    pointer-events: visible;
+    transition: all .2s ease-in-out;
+}
+
+.month-list > div{
+    display: grid;
+    place-items: center;
+}
+
+.month-list > div > div{
+    width: 100%;
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.month-list > div > div:hover{
+    background-color: #b4c1ce;
+}
+
+@keyframes to-top{
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Cerrar sesion */
+
+/* Estilos para la ventana de cerrar sesión */
+.cerrarsesion {
+    display: none;  /* OCULTA por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1500; /* Asegúrate de que esté por ENCIMA de la sidebar */
+  }
+  
+  .cerrarsesion__contenido {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1600;
+  }
+  
+
+#texto-salir {
+    color: #8da4b7;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#btnSalir,
+#btnCancelar {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+}
+
+#btnSalir {
+    background-color: #8ebdf0;
+    color: #fff;
+}
+
+#btnCancelar {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+#btnSalir:hover {
+    background-color: #7da9d8;
+}
+
+#btnCancelar:hover {
+    background-color: #c0392b;
+}
+
+@media (width < 1050px) {
+    .container_flex {
+        flex-wrap: wrap;
+    }
+}
+

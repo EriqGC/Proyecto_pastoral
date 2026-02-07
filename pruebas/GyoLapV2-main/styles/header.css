@@ -1,0 +1,61 @@
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 150px;
+    height: 60px;          /* Ajusta la altura a tu gusto */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 75px;
+    padding: 10px 0;    /* Menos padding para que se vea más delgado */
+    background-color: #F0EDED;
+  }
+  
+.seccion-bienvenida{
+    display: flex;
+    align-items: center;
+}
+
+.texto-bienvenida{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+}
+
+.nombre-doctor{
+    color: #6299E1;
+}
+
+.header-icons{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.fa-bell{
+    font-size: 24px;
+    color: #777;
+    cursor: pointer;
+}
+
+.perfil-caja{
+    display: flex;
+    align-items: center;
+    border: 1px solid #d1d8df;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.icono-perfil{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.nombre-perfil{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    color: #333;
+}

@@ -1,0 +1,118 @@
+.dialog {
+    border: none;
+    border-radius: 15px;
+    padding: 0;
+    width: 400px;
+    max-width: 90%;
+    z-index: 1400;
+    background: transparent;
+    margin: auto;
+}
+
+/* Contenedor interno */
+.agendar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #fff;
+    padding: 40px 20px 20px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Inputs y selects */
+.nombre-input,
+.motivo select,
+.fecha,
+.hora-inicio,
+.hora-fin {
+    background-color: #f5f5f5;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: inset 0 0 0 1px #e0e0e0;
+}
+
+.nombre-input:focus,
+.motivo select:focus,
+.fecha:focus,
+.hora-inicio:focus,
+.hora-fin:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px #6299E1;
+}
+
+/* Select */
+.motivo {
+    position: relative;
+}
+
+.motivo select {
+    appearance: none;
+    width: 100%;
+    padding-right: 30px;
+}
+
+/* Horas */
+.hora-inicio,
+.hora-fin {
+    text-align: center;
+    width: 100px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* Botón crear */
+.crear {
+    background-color: #6299E1;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.crear:hover {
+    background-color: #527fb3;
+}
+
+/* Botón cancelar */
+.cancelar {
+    background-color: #e06262;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.cancelar:hover {
+    background-color: #c94c4c;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 18px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.cerrar-modal:hover {
+    color: #333;
+}

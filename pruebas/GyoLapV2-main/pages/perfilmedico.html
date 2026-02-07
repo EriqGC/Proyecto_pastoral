@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GyoLap</title>
+    <link rel="stylesheet" href="../styles/perfilmedico.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
+
+</head>
+
+<body>
+    <div class="sidebar" id="sidebar"></div>
+    <div class="header" id="header"></div>
+
+    <main>
+        <div class="container_flex">
+            <!-- Caja de Visitas de Hoy -->
+            <div class="visitas-hoy">
+                <h2>Visitas de hoy</h2>
+                <div class="visitas-contenido">
+                    <span class="numero-visitas">8</span>
+                    <div class="sub-cajas">
+                        <div class="sub-caja pacientes-nuevas">
+                            <span>Pacientes nuevas</span>
+                            <span class="numero">40</span>
+                        </div>
+                        <div class="sub-caja seguimientos">
+                            <span>Seguimientos</span>
+                            <span class="numero">64</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Caja lista de Pacientes -->
+            <div class="lista-pacientes">
+                <h2>Lista de Pacientes</h2>
+                <div class="paciente" style="--paciente-color: #A6C8FF;">
+                    <div class="nombre">
+                        <span class="circulo"></span>
+                        Isabela White
+                    </div>
+                    <span class="hora">9 : 00 AM</span>
+                </div>
+                <div class="paciente" style="--paciente-color: #A6C8FF;">
+                    <div class="nombre">
+                        <span class="circulo"></span>
+                        Isabela White
+                    </div>
+                    <span class="hora">9 : 00 AM</span>
+                </div>
+                <div class="paciente" style="--paciente-color: #A6C8FF;">
+                    <div class="nombre">
+                        <span class="circulo"></span>
+                        Isabela White
+                    </div>
+                    <span class="hora">9 : 00 AM</span>
+                </div>
+                <div class="paciente" style="--paciente-color: #A6C8FF;">
+                    <div class="nombre">
+                        <span class="circulo"></span>
+                        Isabela White
+                    </div>
+                    <span class="hora">9 : 00 AM</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Calendario -->
+        <div class="calendar">
+            <div class="calendar-header">
+                <span class="month-picker" id="month-picker">
+                    Febrero
+                </span>
+                <div class="year-picker">
+                    <span class="year-change" id="prev-year">
+                        <pre><</pre>
+                    </span>
+                    <span id="year">2025</span>
+                    <span class="year-change" id="next-year">
+                        <pre>></pre>
+                    </span>
+                </div>
+            </div>
+            <div class="calendar-body">
+                <div class="calendar-week-day">
+                    <div>DOM</div>
+                    <div>LUN</div>
+                    <div>MAR</div>
+                    <div>MIE</div>
+                    <div>JUE</div>
+                    <div>VIE</div>
+                    <div>SAB</div>
+                </div>
+                <div class="calendar-days">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
+                    <div>10</div>
+                    <div>11</div>
+                    <div>12</div>
+                    <div>13</div>
+                    <div>14</div>
+                </div>
+            </div>
+            <div class="month-list">
+            </div>
+        </div>
+        <!-- Cerrar sesion -->
+        <div id="cerrarsesion" class="cerrarsesion">
+            <div class="cerrarsesion__contenido">
+                <p>¿Estás segura que quieres <span id="texto-salir">SALIR</span>?</p>
+                <button id="btnSalir" onclick="confirmarSalir()">Sí</button>
+                <button id="btnCancelar" onclick="cerrarCerrarsesion()">No</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="../scripts/perfilmedico.js"></script>
+    <script src="../scripts/sidebar.js"></script>
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/cerrarsesion.js"></script>
+    <script src="https://kit.fontawesome.com/6f8f4ae056.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
